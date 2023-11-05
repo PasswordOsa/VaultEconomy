@@ -1,0 +1,18 @@
+name: VaultEconomy
+version: '${project.version}'
+main: org.osa678.vaulteconomy.VaultEconomy
+api-version: '1.13'
+softdepend: [ Vault ]
+load: STARTUP
+
+commands:
+  economy:
+    description: "Manages Cow economy."
+    usage: "/economy <view/take/give> <player> [amount]"
+    aliases: [ eco, money, balance, bal ]
+    permission: vaulteconomy.command.economy
+permissions:
+  vaulteconomy.command.op:
+    default: op
+  vaulteconomy.command.default:
+    default: true
